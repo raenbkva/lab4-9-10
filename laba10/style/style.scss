@@ -4,6 +4,10 @@ $half: percentage(1/4);
   font-size: $f;
   color:$c;
 }
+$colors: (
+  white-text: #FFFFFF,
+  blue-text:#2F80ED,
+);
 $Ms:'Montserrat', sans-serif;
 %circle{
   width: 231px;
@@ -75,7 +79,7 @@ header{
       height: 42px;
       background: #FFFFFF;
       border-radius: 50px;
-      color:#2F80ED;
+      color: map-get($map: $colors, $key: blue-text);
       cursor: pointer;
       border: none;
       font-family: $Ms;
@@ -109,7 +113,7 @@ header{
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 30px;
-  color: white;
+  color: map-get($map: $colors, $key: white-text);
   font-family: $Ms;
   .customer-developer{
     width: 552px;
