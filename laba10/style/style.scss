@@ -1,0 +1,304 @@
+$half: percentage(1/4);
+@import "rating.scss";
+@mixin fontz($f,$c){
+  font-size: $f;
+  color:$c;
+}
+$Ms:'Montserrat', sans-serif;
+%circle{
+  width: 231px;
+  height: 231px;
+  background: radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%), #FFFFFF;
+  box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
+  filter: blur(20px);
+  border-radius: 50%;
+}
+body{
+  background-color: white;
+}
+header{
+  background: url("../главное_фото.png");
+  position: absolute;
+  top:0;
+  right: 0;
+  background-size : cover;
+  width: 100%;
+  height: 700px;
+
+}
+.menu{
+  z-index: 1;
+  margin-top: 40px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  padding: 0;
+  li {
+    list-style-type: none;
+    font-family: $Ms;
+    font-weight: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+    &:hover{
+      font-weight: bold;
+    }
+    &:first-child {
+      @include fontz(14px,#2F80ED);
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+}
+.menu-second{
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  padding: 0;
+  margin-left: 30px;
+  li {
+    list-style-type: none;
+    font-family: $Ms;
+    font-weight: normal;
+    @include fontz(14px,#FFFFFF);
+    cursor: pointer;
+    transition: 0.3s;
+    button{
+      width: 160px;
+      height: 42px;
+      background: #FFFFFF;
+      border-radius: 50px;
+      color:#2F80ED;
+      cursor: pointer;
+      border: none;
+      font-family: $Ms;
+      transition: 0.5s;
+      &:hover{
+        background-color: #2F80ED;
+        color: #FFFFFF;
+        border: 1px solid white;
+      }
+    }
+    &:hover{
+      font-weight: bold;
+      font-size: 14px;
+    }
+  &:first-child{
+    font-weight: bold;
+  }}
+}
+.menu-container{
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+}
+.customer-developer-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 30px;
+  color: white;
+  font-family: $Ms;
+  .customer-developer{
+    width: 552px;
+    height: 337px;
+    margin-right: 30px;
+    .button-back{
+      width: 229px;
+      height: 77px;
+      border-radius: 50px;
+      background: rgba(100, 226, 205, 0.5);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+       button{
+          cursor: pointer;
+          width: 192px;
+          height: 50px;
+          color: white;
+          font-family: $Ms;
+          background: #64E2CD;
+          border-radius: 50px;
+          border:none;
+         transition: 0.5s;
+         font-weight: bold;
+        &:hover{
+          background-color: white;
+          color: rgba(41, 60, 97, 0.65);
+        }
+    }
+  }
+}}
+.rating-position{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+  .rating{
+    width: 231px;
+    height: 231px;
+    color:#2F80ED;
+    font-family: $Ms;
+    margin-top:-20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p{
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    .weight-p{
+      font-weight: bold;
+      margin-top: 0;
+    }
+    .bid-p{
+      margin: 0;
+      font-weight: bold;
+      font-size: 34px;
+    }
+    a{
+      text-decoration: none;
+      @include fontz(10px, #2F80ED);
+      &:hover{
+        text-decoration: underline;
+
+      }
+    }
+  }
+
+.causes-row{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+.causes-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 669px;
+  position: relative;
+}
+.causes{
+  margin-top: 830px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+    & > p{
+    font-family: $Ms;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+      width: 30%;
+  }
+  .causes-case{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 51px;
+    padding-top: 32px;
+    align-items: flex-start;
+    width: 263px;
+    height: 211px;
+    margin-bottom: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 30px 100px rgba(47, 55, 237, 0.1);
+    border-radius: 10px;
+    p{
+      @include fontz(14px,#636363);
+      line-height: 20px;
+      font-family: $Ms;
+      margin-top: 20px;
+      margin-right: 28px;
+    }
+    .percents{
+      Font-family: $Ms;
+      font-style: normal;
+      font-weight: bold;
+      @include fontz(22px,#2F80ED);
+      line-height:34px;
+      margin-top: 20px;
+    }
+  }
+}
+.circle-why{
+  float: right;
+  margin-top: 100px;
+  @extend %circle;
+}
+.why{
+  background: url("../who_why.png") no-repeat right;
+  background-size: cover;
+  float: right;
+  margin-top: -100px;
+  min-height: 490px;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .who{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    & > p{
+      font-family: $Ms;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 124.41%;
+    }
+    .why-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+      .why-box{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+        width: $half;
+       & > p{
+         font-weight: 600;
+         @include fontz(14px,#2F80ED);
+         line-height: 143.55%;
+         letter-spacing: 0.05em;
+         font-family: $Ms;
+       }
+        & > span{
+          @include fontz(14px,#636363);
+          font-family: $Ms;
+          line-height: 143.55%;
+
+        }
+    }
+  }}
+}
